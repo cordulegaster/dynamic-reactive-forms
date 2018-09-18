@@ -6,6 +6,7 @@
     <label><input type="radio" formControlName="registrationType" value="company">Company</label>
   </div>
   <app-person [group]="registrationForm" *ngIf="registrationForm.value.registrationType === 'person'"></app-person>
+  <app-company [group]="registrationForm" *ngIf="registrationForm.value.registrationType === 'company'"></app-company>
   <button type="submit">Submit</button>
 </form>
 <pre>

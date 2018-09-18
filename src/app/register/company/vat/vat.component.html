@@ -1,3 +1,7 @@
-<p>
-  vat works!
-</p>
+<div [formGroup]="vat">
+  <h3>VAT information</h3>
+ <label>
+    Please enter your VAT-number:
+    <input type="text" formControlName="vatNumber">
+  </label>
+</div>
