@@ -1,0 +1,21 @@
+<div [formGroup]="companyForm">
+  <h3>Company information</h3>
+  <label>
+    Company Name:
+    <input type="text" formControlName="name">
+  </label>
+  <label>
+    Address:
+    <input type="text" formControlName="address">
+  </label>
+  <label>
+    Contact Person:
+    <input type="text" formControlName="contactPerson">
+  </label>
+  <div>
+    Is your company VAT registered?<br>
+    <label><input type="radio" formControlName="vatRegistered" value="yes">Yes</label><br>
+    <label><input type="radio" formControlName="vatRegistered" value="no">No</label>
+  </div>
+  <app-vat [group]="companyForm" *ngIf="companyForm.value.vatRegistered === 'yes'"></app-vat>
+  </div>
